@@ -1,0 +1,389 @@
+/* ================================= 
+  Base Styles
+  ==================================== */
+
+  *, *:before, *:after {
+    -moz-box-sizing: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body {
+   font-family: 'Merriweather', serif;
+ }
+
+ .container {
+   padding: 0 .8em;
+ }
+
+ header {
+   background: #3e474f;
+   color: white;
+   margin: 0;
+   padding: 10px 0;
+   text-align: center;
+ }
+
+ header h1 {
+   text-transform: uppercase;
+   font-size: 1.2em;
+   font-weight: 500;
+ }
+
+ section {
+   border-bottom: 4px solid #3e474f;
+   text-align: center;
+   padding: 10px 0px 20px;
+   font-weight: 100;
+   font-size: 14px;
+   margin-bottom: -5px;
+ }
+
+ section h2 {
+   color: #3e474f;
+   font-size: 1.3em;
+   font-weight: 600;
+   margin-bottom: 5px;
+   /* letter-spacing: 0px; */
+ }
+
+ section p {
+   color: #bfc4cc;
+   margin-top: 10px;
+ }
+
+  fieldset {
+   border: none;
+   padding: 0;
+   margin: 0;
+ }
+
+ .separation {
+   border: 0;
+   border-top: 2px solid #3e474f;
+ }
+
+ #contact_info {
+   margin-bottom: 1.5em;
+ }
+
+ legend {
+   font-size: 1.1em;
+   font-weight: bold;
+   padding: 1em 0;
+   color: #3e474f;
+ }
+
+
+ label {
+    display: block;
+    color: #6f6f70;
+    font-size: 1em;
+    font-weight: 100;
+ }
+
+ input[type="checkbox"] + label,
+ input[type="radio"] + label {
+   display: inline-block;
+   font-size: .9em;
+   padding-left: .5em;
+   margin-bottom: .8em;
+ }
+
+ p {
+    font-size: 1em;
+    color: #6f6f70;
+ }
+
+ /* ================================= 
+  Colors, shadows, images...
+  ==================================== */
+  
+ .number {
+  background-color: #5075af;
+  color: #fff;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  font-size: 1em;
+  margin-right: 4px;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+  
+ input[type="text"],
+ input[type="email"],
+ input[type="tel"],
+ input[type="date"],
+ select,
+ textarea {
+   width: 100%;
+   height: 3.4em;
+   padding: .8em;
+   margin: .8em 0 1.5em;
+   text-align: left;
+   border: 2px solid #3e474f;
+   border-radius: 5px;
+   background: #e8eaed;
+    outline: 0;
+ }
+
+ input[type="text"]:hover,
+ input[type="email"]:hover,
+ input[type="tel"]:hover,
+ input[type="date"]:hover,
+ select:hover,
+ textarea:hover {
+  background: #ddd;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  background: #ddd;
+  background: linear-gradient(white, transparent 140%),
+  #3e474f;
+  border: 2px solid  #3e474f;
+  outline: none;
+}
+
+input[type="text"]:last-child {
+  margin-bottom: 2em;
+  width: 50%;
+}
+
+
+select,
+input[type="date"] {
+  color: gray;
+  font-size: .9em;
+  min-height: 54.391px;
+  cursor: pointer;
+}
+
+
+select option:hover {
+    background-color:yellow;
+}
+
+/* placeholder */
+
+::-webkit-input-placeholder {
+  text-align: right;
+  font-size: .7em;
+  font-style: italic;
+  padding-right: 2px;
+  
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+  font-size: .7em;
+  font-style: italic;
+  padding-right: 2px  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: right;
+  font-size: .7em;
+  font-style: italic;
+  padding-right: 2px  
+}
+
+:-ms-input-placeholder {  
+  text-align: right;
+  font-size: .7em;
+  font-style: italic;
+  padding-right: 2px  
+}
+
+.icon,
+.icon:hover {
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../img/arrows.png");
+  background-repeat: no-repeat;
+  background-position: right 50%;
+  background-size: 35px 35px;
+  cursor: pointer;
+}
+
+/* ================================= 
+  Checkboxes and buttons
+  ==================================== */
+
+
+
+/* checkbox */
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 15%;
+  background: #ddd;
+  margin: 0 10px 0 -5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before {
+  font-weight: 900;
+  color: #3e474f;
+  content: "\2714";
+  width: 1.2em;
+  height: 1.2em;
+  box-shadow: 0 0 0 0.15em #3e474f;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+/* radio buttons */
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  border: 0;
+  border-radius: 50%;
+  background: #ddd;
+  margin: 0 10px 0 -5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label:before {
+  content: "";
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background: #3e474f;
+  border: 4px solid #ddd;
+  box-shadow: 0 0 0 0.15em #3e474f;
+  vertical-align: middle;
+}
+
+
+/* textarea */
+
+.comment {
+    margin-top: 1.5em;
+    color: #6f6f70;
+ } 
+
+ textarea {
+    height: 6em;
+ }
+
+/* button */
+
+.button {
+  width: 100%;
+  padding: 1em 0;
+  border: none;
+  border-radius: 5px;
+  background: #5075af;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.button:hover {
+  box-shadow: inset 0px 0px 0px 3px #3a4c68,
+              inset 0px 0px 10px 5px #fff;
+}
+
+.button:after {
+  content: "";
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  vertical-align: -15%;
+  margin-left: 15px;
+}
+
+/* footer  */
+
+.footer {
+  text-align: center;
+}
+
+/******************************
+Media Query 760px
+******************************/
+
+@media screen and (min-width: 760px) {
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .info label {
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+    font-size: .9em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select {
+    display: inline-block;
+    width: 78%;
+    margin-left: .6%;
+  }
+
+  section h2 {
+    font-size: 1.6em;
+  }
+
+  input[type="text"]:last-child {
+  width: 30%;
+}
+
+  /* legend styling*/
+
+  .number {
+    display: none;
+  }
+
+  legend:before,
+  legend:after {
+    content: '\00ab';
+    transform: rotate(-90deg);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5075af;
+    font-size: .9em;
+    line-height: 1.2em;
+    text-align: center;
+    vertical-align: 5%;
+    color: #fff;
+    margin: 0 10px;
+ }
+
+
+}
